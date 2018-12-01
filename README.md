@@ -1,1 +1,1 @@
-# wang-hao-yi-setting.github.io
+# wang-hao-yi.github.io
