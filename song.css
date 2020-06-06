@@ -1,0 +1,28 @@
+.result{
+  font-weight:bold;
+  text-decoration:none;
+}
+.hidden1{
+  text-decoration:none;
+  color:red;
+}
+.hidden2{
+  text-decoration:none;
+  color:blue;
+}
+.hidden3{
+  text-decoration:none;
+  color:green;
+}
+.container {
+    overflow: hidden;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.middle {
+    margin: 0 100px;
+}
