@@ -117,6 +117,7 @@ window.onload=function(){
 	d = new Array(max);
 	for(i=0;i<set;i++){
 		a[i].innerHTML=a[i].title;
+		a[i].target="_blank"
 	}
 };
 function test(id) {
@@ -143,6 +144,7 @@ btn.addEventListener('click',function(){
 		indexset = a.length - max + i;
 		a[indexset].innerHTML="　";
 		a[indexset].href="";
+		a[indexset].target="";
 		d[i]=0;
 	}
 	for(i=0;i<v;i++){
@@ -156,6 +158,7 @@ btn.addEventListener('click',function(){
 		var join = j + "." + a[index].title;
 		a[indexset].innerHTML=join;
 		a[indexset].href=a[index];
+		a[indexset].target="_blank";
 		if(index < setlist1){
 			a[indexset].style.color='#ff0000'
 		}
