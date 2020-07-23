@@ -1,0 +1,32 @@
+.result{
+  text-decoration:none;
+  font-weight:bold;
+}
+#hidden1{
+  text-decoration:none;
+  color:#ff0000;
+}
+#hidden2{
+  text-decoration:none;
+  color:#0000ff;
+}
+#hidden3{
+  text-decoration:none;
+  color:#00ff00;
+}
+.container {
+    overflow: hidden;
+}
+.right {
+    float: right;
+	text-align:right;
+}
+.left {
+    float: left;
+}
+.middle {
+    margin: 0 250px;
+}
+a:hover {
+	font-weight:bolder;
+}
