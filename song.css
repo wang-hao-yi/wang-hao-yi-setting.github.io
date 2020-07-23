@@ -8,11 +8,19 @@
 }
 #hidden2{
   text-decoration:none;
-  color:#0000ff;
+  color:#00ff00;
 }
 #hidden3{
   text-decoration:none;
-  color:#00ff00;
+  color:#0000ff;
+}
+#hidden4{
+  text-decoration:none;
+  color:#ffff00;
+}
+#hidden5{
+  text-decoration:none;
+  color:#000000;
 }
 .container {
     overflow: hidden;
