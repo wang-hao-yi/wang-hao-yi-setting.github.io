@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyA4gNR_RYy0jUcPE0tIwxopp1ruwbZGVcs",
+    authDomain: "test-ad3aa.firebaseapp.com",
+    databaseURL: "https://test-ad3aa.firebaseio.com",
+    projectId: "test-ad3aa",
+    storageBucket: "test-ad3aa.appspot.com",
+    messagingSenderId: "749451054165",
+    appId: "1:749451054165:web:4c2288811c1533ffda98dc",
+    measurementId: "G-E7JX8MYGPE"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.database();
+</script>
+		<title></title>
+	</head>
+	<body>
+	<button id = "singUpPopup" onclick="a();">使用google註冊(Popup)</button>
+	<button id = "singUpRedirect" onclick="b();">使用google註冊(Redirect)</button>
+	<script>
+var provider = new firebase.auth.GoogleAuthProvider();
+function a() {
+console.log('a')
+firebase.auth().signInWithPopup(provider).then(function(result) {
+  var token = result.credential.accessToken;
+  var user = result.user;
+  console.log(token,user)
+}).catch(function(error) {
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  var email = error.email;
+  var credential = error.credential;
+});  
+}
+function b() {
+firebase.auth().getRedirectResult().then(function(result) {
+  if (result.credential) {
+    var token = result.credential.accessToken;
+  }
+  var user = result.user;
+  console.log(token,user)
+}).catch(function(error) {
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  var email = error.email;
+  var credential = error.credential;
+});
+ }
+	</script>
+	</body>
+</html>
